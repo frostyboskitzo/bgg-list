@@ -31,8 +31,8 @@ Check that it works:
 
 Install Ruby:
 * rbenv install -l
-* rbenv install 2.7.2
-* rbenv global 2.7.2
+* rbenv install 2.7.3
+* rbenv global 2.7.3
 
 (Cause I'm lazy I also add this user to sudoers in dev, not recommended for prod.)
 
