@@ -158,4 +158,15 @@ With ruby and the files and the database, and secrets.yml configured, you should
 
 If your environment is set up, here's the deploy:
 
+For first time setup:
+* rails g active_admin:install
+* rails db:migrate
+* rails db:seed
+* rails server
+
+Visit http://localhost:3000/admin and log in as the default user:
+
+    User: admin@example.com
+    Password: password
+
 TBC
