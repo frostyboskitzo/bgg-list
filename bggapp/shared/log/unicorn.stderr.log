@@ -7,3 +7,6 @@ I, [2021-07-04T15:33:59.995829 #18827]  INFO -- : worker=1 spawned pid=18827
 I, [2021-07-04T15:33:59.995904 #18827]  INFO -- : worker=1 ready
 I, [2021-07-04T15:33:59.997806 #18826]  INFO -- : worker=0 spawned pid=18826
 I, [2021-07-04T15:33:59.997857 #18826]  INFO -- : worker=0 ready
+I, [2021-07-04T16:32:05.982693 #18824]  INFO -- : reaped #<Process::Status: pid 18826 exit 0> worker=0
+I, [2021-07-04T16:32:05.983059 #18824]  INFO -- : reaped #<Process::Status: pid 18827 exit 0> worker=1
+I, [2021-07-04T16:32:05.983118 #18824]  INFO -- : master complete
