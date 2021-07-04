@@ -11,23 +11,30 @@ This will probably be ruby. So, following Infrastructure as code, let's go with 
 As a note: apps like this should not be run as root. I use a user called "bggapp"
 * apt install curl
 * useradd bggapp
-* usermod -G wheel,rvm bggapp
 * usermod --shell /bin/bash bggapp
 
 Switch to bggapp user
+
 * su bggapp
 
-As the user bggapp, run: 
-* gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-* curl -sSL https://get.rvm.io | bash -s stable
-* umask u=rwx,g=rwx,o=rx
-* source /home/bggapp/.rvm/scripts/rvm
+We're going to use RBENV: As the user bggapp, run:
+
+* sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev
+* cd ~
+* curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
+* echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+* echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+* source ~/.bashrc
+
+Check that it works:
+* rbenv -v
+
+Install Ruby:
+* rbenv install -l
+* rbenv install 2.7.2
+* rbenv global 2.7.2
 
 (Cause I'm lazy I also add this user to sudoers in dev, not recommended for prod.)
-
-* rvm list known
-* rvm install 2.7
-* rvm use 2.7 --default
 
 Ensure it all works:
 
